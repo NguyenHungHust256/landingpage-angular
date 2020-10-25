@@ -452,7 +452,7 @@ td {
 }
 
 th {
-  color: #151515;
+  /* color: #151515; */
   font-family: "montserrat-bold", sans-serif;
 }
 
@@ -1143,7 +1143,7 @@ h1.intro-header::before {
 .header-logo {
   position: absolute;
   left: 40px;
-  top: 50%;
+  top: 25%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1162,7 +1162,6 @@ h1.intro-header::before {
   font-style: italic;
   font-weight: 900;
   border: none;
-  width: 97px;
   height: 22px;
   text-shadow: none;
   color: white;

@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()">
+<div id="modal-content-wrapper">
+  <header id="modal-header">
+      <h1 id="modal-title">Create Logo</h1>
+  </header>
+  <section id="modal-body">
+      Text: <input class="input-text" id="logotext"  placeholder="text" required [(ngModel)] = "logo.text"  name="text"/>  
+  </section>
+  <footer id="modal-footer">
+      <button mat-raised-button id="modal-action-button" type="submit">Add</button>
+      <button mat-raised-button id="modal-cancel-button" type="button" (click)="closeModal()">Back</button>
+  </footer>
+</div>
+</form>

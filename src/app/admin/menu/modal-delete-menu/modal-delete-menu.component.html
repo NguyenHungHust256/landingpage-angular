@@ -1,0 +1,14 @@
+<form (ngSubmit)="deleteMenu()">
+  <div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Delete Menu</h1>
+    </header>
+    <section id="modal-body">
+      <h5> Do you want delete it?</h5>
+    </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-action-button" type="submit">Delete</button>
+        <button mat-raised-button id="modal-cancel-button" type="button" (click)="closeModal()">Back</button>
+    </footer>
+  </div>
+  </form>

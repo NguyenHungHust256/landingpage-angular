@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+  <div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Create Introduction</h1>
+    </header>
+    <section id="modal-body">
+      <div>Name: <input class="input-name" id="name"  placeholder="text" required [(ngModel)] = "menu.name"  name="name"/></div>
+        <div>Title: <input class="input-title" id="title"  placeholder="text" required [(ngModel)] = "menu.title"  name="title"/></div>
+        <div> Description: <input class="input-description" id="title"  placeholder="text" required [(ngModel)] = "menu.description"  name="title"/></div>
+      </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-action-button" type="submit">Add</button>
+        <button mat-raised-button id="modal-cancel-button" type="button" (click)="closeModal()">Back</button>
+    </footer>
+  </div>
+  </form>

@@ -1,3 +1,5 @@
+import { AuthService } from './../../auth.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  logout(): void{
+    this.authService.logout();
+    window.location.href = 'http://localhost:4200/';
+  }
 }

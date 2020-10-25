@@ -1,0 +1,32 @@
+<app-menu-admin></app-menu-admin>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      <h2>Feature List</h2>
+  </div>
+  <button (click) = "openCreateModal()" class="btn btn-primary" style="margin-left: 10px;">Create</button>
+  <div class="panel-body">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Icon</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let feature of features">
+                  <td>{{feature.id}}</td>
+                  <td>{{feature.title}}</td>
+                  <td>{{feature.description}}</td>
+                  <td>{{feature.icon}}</td>
+                  <td>
+                      <button (click)="deleteFeature(feature.id)" class="btn btn-danger">Delete</button>
+                      <button (click) = "editFeature(feature)" class="btn btn-info" style="margin-left: 10px;">Edit</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

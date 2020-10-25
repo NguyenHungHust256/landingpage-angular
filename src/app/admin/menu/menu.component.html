@@ -1,0 +1,32 @@
+<app-menu-admin></app-menu-admin>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+      <h2>Menu List</h2>
+  </div>
+  <button (click) = "openCreateModal()" class="btn btn-primary" style="margin-left: 10px;">Create</button>
+  <div class="panel-body">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let menu of menus">
+                  <td>{{menu.id}}</td>
+                  <td>{{menu.name}}</td>
+                  <td>{{menu.title}}</td>
+                  <td>{{menu.description}}</td>
+                  <td>
+                      <button (click)="deleteMenu(menu.id)" class="btn btn-danger">Delete</button>
+                      <button (click) = "editMenu(menu)" class="btn btn-info" style="margin-left: 10px;">Edit</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

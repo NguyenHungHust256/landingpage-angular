@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+  <div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Create Feature</h1>
+    </header>
+    <section id="modal-body">
+        <div>Title: <input class="input-text" id="title"  value="feature.title" placeholder="text" required [(ngModel)] = "feature.title"  name="title"/></div>
+        <div> Description: <input class="input-description" value="feature.description" id="title"  placeholder="text" required [(ngModel)] = "feature.description"  name="description"/></div>
+      <div>Icon: <input class="input-icon" id="icon"  value="feature.icon" placeholder="text" required [(ngModel)] = "feature.icon"  name="icon"/></div>
+
+      </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-action-button" type="submit">Update</button>
+        <button mat-raised-button id="modal-cancel-button" type="button" (click)="closeModal()">Back</button>
+    </footer>
+  </div>
+  </form>

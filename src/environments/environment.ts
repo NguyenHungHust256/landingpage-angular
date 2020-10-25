@@ -2,8 +2,30 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { KeycloakOptions } from 'keycloak-angular';
+import { KeycloakConfig, KeycloakInitOptions } from 'keycloak-js';
+
+// Add here your keycloak configuration information
+const keycloakConfig: KeycloakConfig = {
+  clientId: 'demo-client',
+  realm: 'master',
+  url: 'http://localhost:8180/auth'
+};
+
+const keycloakInitOptions: KeycloakInitOptions = {
+  onLoad: 'login-required',
+  checkLoginIframe: false
+};
+
+const keycloakOptions: KeycloakOptions = {
+  config: keycloakConfig,
+  initOptions: keycloakInitOptions,
+  enableBearerInterceptor: true
+};
+
 export const environment = {
-  production: false
+  production: false,
+  keycloakOptions
 };
 
 /*

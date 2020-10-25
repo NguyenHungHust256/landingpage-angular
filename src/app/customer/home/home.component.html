@@ -1,6 +1,5 @@
- <!-- header 
-   ================================================== -->
-   <header id="header" class="row">   
+
+<header id="header" class="row">   
 
     <div class="header-logo">
        <a href="/">{{textLogo}}</a>
@@ -8,20 +7,16 @@
 
     <nav id="header-nav-wrap">
    <ul class="header-main-nav">
-     <li class="current"><a class="smoothscroll"  routerLink="" title="home">Home</a></li>
-    <li><a class="smoothscroll"  href="AboutUs" title="about">About</a></li>
-     <li><a class="smoothscroll"  href="Pricing" title="pricing">Pricing</a></li>
-     <li><a class="smoothscroll"  href="Testimonial" title="testimonials">Testimonials</a></li>
-     <li><a class="smoothscroll"  href="Downloads" title="download">Download</a></li>	
+     <li class="current" *ngFor = "let menu of menus">
+        <a class="smoothscroll" [href]="'/'+menu.name">{{menu.name}}</a>
+    </li>
    </ul>
-
-         <a routerLink="/Login" title="sign-up" class="button button-primary cta">Sign Up</a>
+         <a title="sign-up" class="button button-primary cta" (click) = "signInOrOut()" >{{action}}</a>
  </nav>
 
  <a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
   
-</header> <!-- /header -->
-
+</header>
 
 <!-- home
 ================================================== -->
@@ -32,15 +27,8 @@
 
          <div class="row contents">                     
              <div class="home-content-left">
-
-                 <h3 data-aos="fade-up">Welcome to Dazzle</h3>
-
-                 <h1 data-aos="fade-up">
-                     Creative Landing <br>
-                     Page to Showcase <br>
-                     Your Amazing App.
-                 </h1>
-
+                 <h3 data-aos="fade-up">{{intro.title}}</h3>
+                 <h1 data-aos="fade-up">{{intro.description}}</h1>
                  <div class="buttons" data-aos="fade-up">
                      <a href="#download" class="smoothscroll button stroke">
                          <span class="icon-circle-down" aria-hidden="true"></span>
