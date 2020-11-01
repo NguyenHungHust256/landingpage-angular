@@ -19,6 +19,7 @@ import { FeatureComponent } from './admin/feature/feature.component';
 
 const routes: Routes = [
   { path: '', component: HomeAboutComponent },
+  { path: 'Home', component: HomeAboutComponent },
   { path: 'About', component: HomeAboutComponent },
   { path: 'Pricing', component: HomePriceComponent },
   { path: 'Testimonial', component: HomeTestimonialComponent },
